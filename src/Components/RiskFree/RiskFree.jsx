@@ -30,7 +30,7 @@ const RiskFree = () => {
         <div className="relative flex flex-col sm:flex-row items-center gap-6">
           <div className="relative w-72 sm:w-96 md:w-[420px]">
             <img
-              src={assets.moneylogo}
+              src={assets.moneylogo2}
               alt="Wallet illustration"
               className="object-cover relative z-10 brightness-75"
             />

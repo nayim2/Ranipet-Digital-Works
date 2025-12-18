@@ -56,6 +56,7 @@ import CONTENT from './CONTENT_MARKETING.png'
 import WEBSITE from './WEBSITE.png'
 import APP from './APP.png'
 import MEDIA from './MEDIA.png'
+import moneylogo2 from './moneylogo2.png'
 
 export const assets={
     logo,
@@ -115,6 +116,7 @@ export const assets={
     CONTENT,
     WEBSITE,
     APP,
-    MEDIA
+    MEDIA,
+    moneylogo2
 }
 
