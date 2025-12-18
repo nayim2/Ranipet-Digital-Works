@@ -1,0 +1,49 @@
+.stick{
+  position: sticky;
+  top: 0;
+}
+
+.swiper_container {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.swiper-slide-active {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.7;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: gray;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #facc15;
+  opacity: 1;
+}
+
+/* hide scrollbar for scrollable row */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

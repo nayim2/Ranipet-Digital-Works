@@ -1,0 +1,155 @@
+/* === Carousel Container === */
+.carousel-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* === Swiper === */
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+}
+
+.slide-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Image Styling === */
+.slide-content img {
+  width: 360px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Center image larger and more focused */
+.swiper-slide-active img {
+  transform: scale(1.1);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* === Title for active slide === */
+.slide-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Show only for center slide */
+.swiper-slide-active .slide-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Navigation Controls === */
+.carousel-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  right: 40%;
+  pointer-events: none;
+  z-index: 50;
+  margin-top: 15px;
+  padding-top: -15px;
+  line-height: -15px;
+}
+
+.custom-nav {
+  pointer-events: auto;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.swiper-button-prev.custom-nav {
+  left: 60px;
+  bottom: 0;
+}
+
+.swiper-button-next.custom-nav {
+  right: 60px;
+  bottom: 0;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+  .slide-content img {
+    width: 280px;
+    height: 340px;
+  }
+  .slide-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .slide-content img {
+    width: 220px;
+    height: 260px;
+  }
+  .slide-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide-content img {
+    width: 170px;
+    height: 210px;
+  }
+  .slide-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .slide-content img {
+    width: 130px;
+    height: 170px;
+  }
+  .slide-title {
+    font-size: 1rem;
+  }
+}
+
+
