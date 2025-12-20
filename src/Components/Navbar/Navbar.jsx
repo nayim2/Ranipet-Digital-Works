@@ -34,7 +34,6 @@ const Navbar = () => {
 
   return (
     <nav className="text-white px-8 md:px-28 bg-black py-2 flex items-center justify-between relative z-50">
- 
       {/* Logo */}
       <div className="flex items-center">
         <Link to="/" onClick={() => setMenuOpen(false)}>
@@ -81,9 +80,32 @@ const Navbar = () => {
 
         <Link
           to="/quote"
-          className="bg-red-700 hover:bg-red-600 text-white px-5 py-1.5 font-medium transition"
+          className="relative overflow-hidden bg-red-700 text-white px-5 py-2 font-medium"
         >
-          Get Quote
+          {/* Wave layer */}
+          <span
+            className="absolute inset-0 bg-red-400 opacity-40"
+            style={{
+              animation: "waveMove 3s linear infinite",
+            }}
+          />
+
+          {/* Text */}
+          <span className="relative z-10">Get Quote</span>
+
+          {/* Inline keyframes */}
+          <style>
+            {`
+      @keyframes waveMove {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    `}
+          </style>
         </Link>
       </div>
 
@@ -99,7 +121,11 @@ const Navbar = () => {
         <div className="absolute top-[56px] left-0 w-full bg-black text-white rounded-b-2xl shadow-lg md:hidden animate-slideDown">
           <ul className="flex flex-col items-center space-y-4 py-6 text-sm font-medium">
             <li>
-              <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-300">
+              <Link
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-gray-300"
+              >
                 Home
               </Link>
             </li>
@@ -116,7 +142,11 @@ const Navbar = () => {
               Results
             </li>
             <li>
-              <Link to="/blogs" onClick={() => setMenuOpen(false)} className="hover:text-gray-300">
+              <Link
+                to="/blogs"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-gray-300"
+              >
                 Blogs
               </Link>
             </li>

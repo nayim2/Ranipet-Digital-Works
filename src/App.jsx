@@ -27,6 +27,7 @@ import Outputs from "./Components/CaseStudy/Outputs";
 import ContactSection from "./Components/ContactSection/ContactSection";
 import RegisterForm from "./Components/ContactSection/RegisterForm";
 import ScrollToTop from "./Components/Home/ScrollToTop";
+import Result from "./Components/Results/Result";
 
 const App = () => {
   return (
